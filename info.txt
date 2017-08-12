@@ -1,3 +1,0 @@
-https://trello.com/b/F1PGR2Rq
-
-https://api.trello.com/1/board/F1PGR2Rq?token=e602fa6386c997c57349fbb29d7bc0b04ac8248c5ff91dcf36dea209b32306d7&key=db1e35883bfe8f8da1725a0d7d032a9c&lists=all
