@@ -5,8 +5,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 
-// Set Port Number to Listen 
-var PORT = 3000;
+// Set Port Number to Listen
+var PORT = 3003;
 
 // Initialize Express
 var app = express();
@@ -31,12 +31,9 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Database Dependencies
 
-
 // Require Database Schema
 
-
 // Database configuration with mongoose
-
 
 // ===== Routes ===== //
  app.get("/", function(req, res){
@@ -45,9 +42,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // This is the route we will send GET requests to retrieve our most recent search data.
 
-
 // This is the route we will send POST requests to post each search.
-
 
 // EXPRESS MIDDLEWARE
 app.use(function(err, res, next){

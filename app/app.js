@@ -10,14 +10,16 @@ import { BrowserRouter, Route } from 'react-router-dom'
 // Reference the high-level components
 import { Navbar } from "./components/Navbar";
 import { Landing } from "./components/Landing";
+import {Footer} from "./components/Footer"
 
 const app =  document.getElementById("app");
 ReactDOM.render (
     <BrowserRouter>
-        <div className="container">
+        <div>
             <Navbar />
-            <Route exact path="/" component={ Landing } />
+            <Route exact path="/" component={Landing} />
+            <Footer />
         </div>
-    </BrowserRouter>, 
+    </BrowserRouter>,
     app
 );
