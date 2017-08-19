@@ -5,7 +5,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const logger = require("morgan");
 
-// Set Port Number to Listen
+// Set Port Number to Listen 
 const PORT = 3000;
 
 // Initialize Express
@@ -27,19 +27,21 @@ app.use(bodyParser.json({type: "application/vnd.api+json"}));
 // Serve static content for the app from the client directory
 app.use(express.static(path.join(__dirname, "public")));
 
-// Database Dependencies Require Database Schema Database configuration with
-// mongoose ===== Routes ===== //
-app.get("/", function (req, res) {
+
+
+// ===== Routes ===== //
+ app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
-// This is the route we will send GET requests to retrieve our most recent
-// search data. This is the route we will send POST requests to post each
-// search. EXPRESS MIDDLEWARE
-app.use(function (err, res, next) {
+require('./routes/projectRoutes')(app);
+
+// EXPRESS MIDDLEWARE
+app.use(function(err, res, next) {
     res.status(err.status || 500);
 });
 
-app.listen(process.env.PORT || PORT, function () {
+app.listen(process.env.PORT ||PORT, function() {
+
     console.log("running at localhost " + PORT);
 });
