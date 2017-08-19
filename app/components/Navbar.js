@@ -35,20 +35,13 @@ export class Navbar extends React.Component {
             </div>
             <div className="navbar-right animated fadeIn" id="myNavbar">
               <ul className="nav navbar-right list-inline">
-                <li className="btn btn-amber amber darken-3">
-                  <a href="#" onClick={this.toggleCollapse}>
-                    <i className="fa fa-tasks" />New Project
-                  </a>
+                <li><Button href="#" className="btn btn-amber amber darken-3" text="New Project" onClick={this.toggleCollapse}/>
                 </li>
-                <li className="btn btn-cyan">
-                  <a href="#" onClick={this.toggleCollapse}>
-                    <i className="fa fa-bolt" /> About Us
-                  </a>
+                <li><Button className="btn btn-cyan" href="#" text="About Us" onClick={this.toggleCollapse}/>
                 </li>
-                <li className="btn btn-amber amber darken-5">
-                  <a href="#">Getting Started</a>
+                <li><Button className="btn btn-amber amber darken-5" href="#" text="Getting Started" onClick={this.toggleCollapse}/>
                 </li>
-                <li><Button text="New Button"/>
+                <li><Button className="btn btn-secondary" text="New Button" href="#" onClick={this.toggleCollapse}/>
               </li></ul>
             </div>
           </nav>
