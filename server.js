@@ -33,9 +33,11 @@ app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
-// This is the route we will send GET requests to retrieve our most recent
+/** This is the route we will send GET requests to retrieve our most recent
 // search data. This is the route we will send POST requests to post each
-// search. EXPRESS MIDDLEWARE
+// search*/
+
+// EXPRESS MIDDLEWARE
 app.use(function (err, res, next) {
     res.status(err.status || 500);
 });
