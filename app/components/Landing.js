@@ -3,7 +3,7 @@ import React from "react";
 export class Landing extends React.Component {
   render() {
     return (
-      <div className="row z-depth-3 animated slideInRight">
+      <div className="landing row z-depth-3 animated slideInRight">
         {/* Jumbotron Section  */}
         <div className="card col blue-grey lighten-4">
           <div className="card-body">
@@ -17,11 +17,17 @@ export class Landing extends React.Component {
               felis. Morbi congue augue at tellus imperdiet, sit amet
               scelerisque turpis egestas. Morbi viverra, ligula nec ultricies
               tempus, sem purus gravida tortor, sed tristique lorem augue et
-              elit. Vestibulum dictum ligula sed leo suscipit dictum. Nunc
-              volutpat nibh eu eros malesuada lacinia. Donec porta malesuada
-              sapien. Nunc facilisis, odio eget dapibus mattis, mauris arcu
-              dignissim diam, sit amet ullamcorper nibh nibh aliquet nibh.
+              elit.
             </p>
+            <blockquote class="blockquote bq-info">
+              <p class="bq-title">Info notification</p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Maiores quibusdam dignissimos itaque harum illo! Quidem,
+                corporis at quae tempore nisi impedit cupiditate perferendis
+                nesciunt, ex dolores doloremque! Sit, rem, in?
+              </p>
+            </blockquote>
           </div>
         </div>
       </div>
