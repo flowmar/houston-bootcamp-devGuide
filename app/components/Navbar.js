@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
+import Button from "./Button";
 
 export class Navbar extends React.Component {
   constructor() {
@@ -47,7 +48,8 @@ export class Navbar extends React.Component {
                 <li className="btn btn-amber amber darken-5">
                   <a href="#">Getting Started</a>
                 </li>
-              </ul>
+                <li><Button text="New Button"/>
+              </li></ul>
             </div>
           </nav>
         </div>

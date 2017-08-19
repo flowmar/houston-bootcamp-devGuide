@@ -19,8 +19,8 @@ export class Landing extends React.Component {
               tempus, sem purus gravida tortor, sed tristique lorem augue et
               elit.
             </p>
-            <blockquote class="blockquote bq-info">
-              <p class="bq-title">Info notification</p>
+            <blockquote className="blockquote bq-info">
+              <p className="bq-title">Info notification</p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Maiores quibusdam dignissimos itaque harum illo! Quidem,

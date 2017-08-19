@@ -9,7 +9,7 @@ export class Footer extends React.Component {
             <div className="container-fluid z-depth-5">
             <div className="row">
                 <footer className="fixed-bottom card col text-center animated slideInLeft bg-amber p-5">
-                    <p class="text-muted">©2017 DevGuide</p>
+                    <p className="text-muted">©2017 DevGuide</p>
                 </footer>
             </div>
         </div>);
