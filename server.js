@@ -2,46 +2,67 @@
 const path = require("path");
 const fs = require("fs");
 const express = require("express");
-const bodyParser = require("body-parser");
-const logger = require("morgan");
+const mongoose = require('mongoose');
+const cookieSession = require('cookie-session');
+const passport = require('passport');
+const keys = require('./config/keys');
 
-// Set Port Number to Listen 
-const PORT = 3000;
+// require User model
+require("./models/User");
+
+// require passport
+require('./config/passport');
+
+// Database Dependencies
+const Promise = require('bluebird');
+
+mongoose.Promise = Promise;
+
+//const User = mongoose.model('users');
+mongoose.connect(keys.mongoURI, {
+    useMongoClient: true
+});
+
+const db = mongoose.connection;
+
+db.on("error", function(error) {
+    console.log("Mongoose Error: ", error);
+});
+
+db.once("open", function() {
+    console.log("Mongoose connection successful.");
+});
 
 // Initialize Express
 const app = express();
 
-//var routes = require('./server/config/routes'); Setting view engine to html
-app.set("view engine", "html");
-app.engine("html", function (path, options, callback) {
-    fs.readFile(path, "utf-8", callback);
-});
+// Tell express to make use of cookies
+app.use(
+    cookieSession({
+        maxAge: 30 * 24 * 60 * 60 * 1000, // 30 days
+        keys: [keys.cookieKey]
+    })
+);
 
-// Run Morgan for Logging
-app.use(logger("dev"));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.text());
-app.use(bodyParser.json({type: "application/vnd.api+json"}));
+// Tell passport it should make use of cookies to handle auth. 
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+// Set Port Number to Listen 
+const PORT = 3000;
 
 // Serve static content for the app from the client directory
 app.use(express.static(path.join(__dirname, "public")));
 
-
-
 // ===== Routes ===== //
- app.get("/", function(req, res) {
+ app.get("/", function(req, res){
     res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
-require('./routes/projectRoutes')(app);
+// require authRoutes for user Login 
+require('./routes/authRoutes')(app);
 
-// EXPRESS MIDDLEWARE
-app.use(function(err, res, next) {
-    res.status(err.status || 500);
-});
-
-app.listen(process.env.PORT ||PORT, function() {
-
+app.listen(process.env.PORT ||PORT, function(){
     console.log("running at localhost " + PORT);
 });
