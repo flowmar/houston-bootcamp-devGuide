@@ -1,6 +1,6 @@
 import React from "react";
 
-export class Landing extends React.Component {
+export default class Main extends React.Component {
   render() {
     return (
       <div className="landing row z-depth-3 animated slideInRight">
