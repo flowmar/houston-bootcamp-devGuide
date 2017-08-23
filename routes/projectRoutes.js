@@ -1,20 +1,25 @@
-const express = require('express');
-// const keys = require('../config/keys');
-// Database Dependencies
-// Require Database Schema
-require("../models/Project");
+// Require Project Schema
+const Project = require("../models/Project");
 
-module.exports = function (app) {
-    // This is the route we will send GET requests to retrieve our most recent
-    // search data.
-    app.get('./api/project', function (req, res) {
-        Project.find({}, function (error, doc) {
-            if (error) {
-                res.send(error);
-            } else {
-                console.log(doc);
+// This is the route we will send GET requests to retrieve our project data.
+module.exports = app => {
+    app.get('/api/projects', (req, res,) => {
+        Project.getProjects((err, doc) => {   
+            if (err) {
+                console.log(err);
+            }
+            else {
                 res.send(doc);
-            };
+            }
+        });
+    });
+
+    app.get('/api/projects/:_id', (req, res) => {
+        Project.getProjectById(req.params._id, (err, doc) => {
+            if(err){
+                throw err;
+            }
+            res.send(doc);
         });
     });
 };

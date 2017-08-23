@@ -9,6 +9,8 @@ const keys = require('./config/keys');
 
 // require User model
 require("./models/User");
+require("./models/Project");
+require("./models/Response");
 
 // require passport
 require('./config/passport');
@@ -62,6 +64,8 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // require authRoutes for user Login 
 require('./routes/authRoutes')(app);
+require('./routes/projectRoutes')(app);
+
 
 app.listen(process.env.PORT ||PORT, function(){
     console.log("running at localhost " + PORT);

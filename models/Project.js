@@ -1,19 +1,27 @@
 // The model basically defines all fields we want to collect
 // Require mongoose
 const mongoose = require("mongoose");
-
+   
 // Create a Schema class with mongoose
 const { Schema } = mongoose;
 
 //Create ProjectSchema 
 const ProjectSchema = new Schema({
-    type: ["workflow", "installation", "versionControl", "framework", "implementation", "deployment" ],
-    question: {
+    lifecycle: {
+        type: String,
+        required: true
+    },
+    todoId: {
+        type: Number,
+        unique: true,
+        required: true
+    },
+    todo: {
         type: String,
         unique: true,
         required: true
     },
-    info: {
+    resource: [{
         name: {
             type: String,
             required: false
@@ -23,18 +31,22 @@ const ProjectSchema = new Schema({
             required: false
         },
         link: {
-            type: Array,
+            type: [String],
             required: false
         }
-    },
-    answer: {
-        type: Boolean,
-        required: true
-    }
+    }],
+
 });
 
 // Save the "Project" model using the ProjectSchema
-const Project = mongoose.model("Project", ProjectSchema);
+const Project = module.exports = mongoose.model("projects", ProjectSchema);
 
-//Export the Project model
-module.exports = Project;
+//Export Projects
+module.exports.getProjects = (callback) => {
+    Project.find(callback);
+}
+
+// Get Project by Id
+module.exports.getProjectById = (id, callback) => {
+	Project.findById(id, callback);
+}
