@@ -9,7 +9,7 @@ import * as actions from '../actions';
 import Navbar from "./Navbar";
 import Main  from "./Main";
 import Footer from "./Footer"
-import Workflow from "./Project/Workflow";
+import Project from "./Project";
 
 class App extends Component {
     // when the app boots up, call our action creator to fetch the current user. 
@@ -25,7 +25,7 @@ class App extends Component {
                     <div>
                         <Navbar />
                         <Route exact path='/' component={ Main } />
-                        <Route exact path='/workflow' component={ Workflow } />
+                        <Route exact path='/project' component={ Project } />
                         <Footer />   
                     </div>
                 </BrowserRouter>
