@@ -14,11 +14,11 @@ class Navbar extends Component {
           //if user isn't logged in
           case false:
                 return <li><Button className="btn btn-amber amber darken-5" href="/auth/google" text="Login With Google"/></li>;
-          // user is logged in 
+          // user is logged in
           default:
             return [
               <li key="1"><Button className="btn btn-cyan" text="About Us"/></li>,
-              <li key="2"><Link to="/project" className="btn btn-amber amber darken-3">New Project</Link></li>, 
+              <li key="2"><Link to="/project" className="btn btn-amber amber darken-3">New Project</Link></li>,
               <li key="3"><Button className="btn btn-amber amber darken-5" href="/api/logout" text="Logout"/></li>
             ];
       }
@@ -32,22 +32,22 @@ class Navbar extends Component {
     };
     return (
       <div className="row z-depth-5 animated slideInDown">
-        <div className="col-12">
+
           {/* Navigation  */}
-          <nav id="mainNav" className="navbar">
+          <nav id="mainNav" className="navbar col">
             <div className="navbar-header">
-              <Link 
-                to={this.props.auth ? '/project' : '/'} className="navbar-brand z-depth-1" style={logoStyle}>
+              <Link
+                to={this.props.auth ? '/project' : '/'} className="navbar-brand z-depth-1 " style={logoStyle}>
                 DevGuide Logo
               </Link>
             </div>
-            <div className="navbar-right animated fadeIn" id="myNavbar"> 
-              <ul className="nav navbar-right list-inline"> 
-                { this.renderContent()}
-              </ul> 
-            </div> 
+            <div className="navbar-right animated fadeIn" id="myNavbar">
+              <ul className="nav navbar-right list-inline">
+                {this.renderContent()}
+              </ul>
+            </div>
           </nav>
-        </div>
+
       </div>
     )
   }

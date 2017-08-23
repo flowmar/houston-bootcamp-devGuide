@@ -7,11 +7,13 @@ export default class Footer extends Component {
     render() {
         return (
             <div className="container-fluid z-depth-5">
-            <div className="row">
-                <footer className="fixed-bottom card col text-center animated slideInLeft bg-amber p-5">
-                    <p className="text-muted">©2017 DevGuide</p>
-                </footer>
+                <div className="row">
+                    <footer
+                        className="fixed-bottom card col text-center animated indigo darken-4 slideInLeft p-5">
+                        <p className="text-muted">©2017 DevGuide</p>
+                    </footer>
+                </div>
             </div>
-        </div>);
+        );
     }
 }

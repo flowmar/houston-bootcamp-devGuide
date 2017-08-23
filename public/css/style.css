@@ -13,6 +13,17 @@ body {
   background-color: rgba(7, 5, 67, .7);
 }
 
+.navbar-brand {
+  font-family: 'Passion One';
+  text-shadow: .06vw .06vw .02vw whitesmoke;
+}
+
 footer {
   height: 20%;
+  background-color: rgba(7, 5, 67, .7) !important;
+}
+
+.landing {
+  height: 100%;
+  color: rgba(7, 5, 67, 1)
 }

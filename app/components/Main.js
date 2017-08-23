@@ -9,23 +9,18 @@ export default class Main extends React.Component {
           <div className="card-body">
             <h1 className="display-3 text-center card-title">DevGuide!</h1>
             <p className="text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              rutrum nulla quis condimentum tincidunt. Fusce vitae iaculis orci.
-              Pellentesque quis orci sapien. Etiam sodales mauris erat, rutrum
-              rutrum orci tempor id. Donec at dolor sollicitudin mi ullamcorper
-              porttitor. Ut at justo accumsan, luctus odio eget, efficitur
-              felis. Morbi congue augue at tellus imperdiet, sit amet
-              scelerisque turpis egestas. Morbi viverra, ligula nec ultricies
-              tempus, sem purus gravida tortor, sed tristique lorem augue et
-              elit.
+              Welcome to DevGuide! We created this application to help developers ensure that
+              they create projects that are carefully planned, version controlled, documented
+              and complete. Our goal is to enforce project best practices by providing a
+              guided walkthrough of the software development lifecycle, alongside useful
+              resources for each step.
             </p>
             <blockquote className="blockquote bq-info">
               <p className="bq-title">Info notification</p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Maiores quibusdam dignissimos itaque harum illo! Quidem,
-                corporis at quae tempore nisi impedit cupiditate perferendis
-                nesciunt, ex dolores doloremque! Sit, rem, in?
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores quibusdam
+                dignissimos itaque harum illo! Quidem, corporis at quae tempore nisi impedit
+                cupiditate perferendis nesciunt, ex dolores doloremque! Sit, rem, in?
               </p>
             </blockquote>
           </div>

@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const Button = ({ text, className, href, onClick }) => (
-    <button className={className}><a href={href}>{text}</a></button>
+    <a href={href}>
+        <button className={className}>{text}</button>
+    </a>
 )
 
 Button.propTypes = {
