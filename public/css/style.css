@@ -21,7 +21,7 @@ body {
 .landing {
   height: 100%;
   color: rgba(7, 5, 67, 1);
-  overflow: auto;
+  overflow: scroll;
 }
 
 .nav-logo {
