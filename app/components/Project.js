@@ -10,14 +10,14 @@ class Project extends Component {
     render() {
         return(
             <div className="row">
-                <div className="col-sm-12">
+                <div className="col">
                     <br/><br/><br/>
                     <div className="card">
-                        <h4 className="card-header">TODO: </h4>
+                        <h4 className="card-header bg-amber darken-3">TODO: </h4>
                         <div className="card-body">
                             <h4 className="card-title">Additional Resources</h4>
                             <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" className="btn btn-primary">Go somewhere</a>
+                            <a href="#" className="btn btn-amber">Go somewhere</a>
                         </div>
                     </div>
                 </div>

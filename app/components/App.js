@@ -12,7 +12,7 @@ import Footer from "./Footer"
 import Project from "./Project";
 
 class App extends Component {
-    // when the app boots up, call our action creator to fetch the current user. 
+    // when the app boots up, call our action creator to fetch the current user.
     // the action creator will make the initial AJAX request.
     componentDidMount() {
         this.props.fetchUser();  //> name of the action creator
@@ -26,7 +26,7 @@ class App extends Component {
                         <Navbar />
                         <Route exact path='/' component={ Main } />
                         <Route exact path='/project' component={ Project } />
-                        <Footer />   
+                        <Footer />
                     </div>
                 </BrowserRouter>
             </div>

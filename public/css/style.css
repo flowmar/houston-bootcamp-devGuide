@@ -4,26 +4,35 @@ html {
 }
 
 body {
-  background-color: #3f729b;
+  background-color: #24496E;
   width: 100vw;
   margin: 0;
 }
 
 .navbar {
-  background-color: rgba(7, 5, 67, .7);
+  /* background-color: rgba(7, 5, 67, .7); */
 }
 
-.navbar-brand {
-  font-family: 'Passion One';
-  text-shadow: .06vw .06vw .02vw whitesmoke;
-}
-
-footer {
+.footer {
   height: 20%;
-  background-color: rgba(7, 5, 67, .7) !important;
+  border: 5px solid black;
 }
 
 .landing {
   height: 100%;
-  color: rgba(7, 5, 67, 1)
+  color: rgba(7, 5, 67, 1);
+  overflow: auto;
+}
+
+.nav-logo {
+  height: 10vw;
+  background-color: rgba(255, 255, 255, .1);
+  border: .01rem solid black;
+}
+
+.main-logo {
+  height: 20vw;
+  padding: 0;
+  margin: 0;
+  border: .01rem solid rgba(0,0,0,.1);
 }
