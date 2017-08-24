@@ -10,6 +10,7 @@ import Navbar from "./Navbar";
 import Main  from "./Main";
 import Footer from "./Footer"
 import Project from "./Project";
+import Installation from "./Installation";
 
 class App extends Component {
     // when the app boots up, call our action creator to fetch the current user.
@@ -26,7 +27,8 @@ class App extends Component {
                         <Navbar />
                         <Route exact path='/' component={ Main } />
                         <Route exact path='/project' component={ Project } />
-                        <Footer />
+                        <Route exact path='/project/installation' component={ Installation } />
+                        {/* <Footer /> */}
                     </div>
                 </BrowserRouter>
             </div>

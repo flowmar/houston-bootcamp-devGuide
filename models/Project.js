@@ -50,3 +50,8 @@ module.exports.getProjects = (callback) => {
 module.exports.getProjectById = (id, callback) => {
 	Project.findById(id, callback);
 }
+
+// Get Installation Lifecycle Cards
+module.exports.getInstallation = (callback) => {
+    Project.find({lifecycle: "Installation"}, callback);
+}
