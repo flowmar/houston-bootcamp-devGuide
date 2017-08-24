@@ -13,6 +13,17 @@ module.exports = app => {
             }
         });
     });
+    
+    app.get('/api/projects/installation', (req, res,) => {
+        Project.getInstallation((err, doc) => {   
+            if (err) {
+                console.log(err);
+            }
+            else {
+                res.json(doc);
+            }
+        });
+    });
 
     app.get('/api/projects/:_id', (req, res) => {
         Project.getProjectById(req.params._id, (err, doc) => {
