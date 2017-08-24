@@ -11,11 +11,6 @@ const ProjectSchema = new Schema({
         type: String,
         required: true
     },
-    todoId: {
-        type: Number,
-        unique: true,
-        required: true
-    },
     todo: {
         type: String,
         unique: true,
@@ -42,11 +37,10 @@ const ProjectSchema = new Schema({
 const Project = module.exports = mongoose.model("projects", ProjectSchema);
 
 //Export Projects
-module.exports.getProjects = (callback) => {
-    Project.find(callback);
+module.exports.getWorkflow = (callback) => {
+    Project.find({lifecycle: "Workflow"}, callback);
 }
 
-// Get Project by Id
-module.exports.getProjectById = (id, callback) => {
-	Project.findById(id, callback);
+module.exports.getInstallation = (callback) => {
+    Project.find({lifecycle: "Installation"}, callback);
 }

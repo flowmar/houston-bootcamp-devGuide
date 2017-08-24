@@ -9,9 +9,11 @@ import * as actions from '../actions';
 import Navbar from "./Navbar";
 import Main  from "./Main";
 import Footer from "./Footer"
-import Project from "./Project";
+import Workflow from "./Projects/Workflow";
+import Installation from "./Projects/Installation";
 
 class App extends Component {
+    
     // when the app boots up, call our action creator to fetch the current user. 
     // the action creator will make the initial AJAX request.
     componentDidMount() {
@@ -25,8 +27,9 @@ class App extends Component {
                     <div>
                         <Navbar />
                         <Route exact path='/' component={ Main } />
-                        <Route exact path='/project' component={ Project } />
-                        <Footer />   
+                        <Route exact path='/project/workflow' component={ Workflow } />
+                        <Route exact path='/project/installation' component={ Installation } /> 
+                        {/* <Footer />     */}
                     </div>
                 </BrowserRouter>
             </div>

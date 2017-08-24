@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
 import Button from "./Button";
-import Project from './Project';
+import Workflow from './Projects/Workflow';
 
 class Navbar extends Component {
    renderContent() {
@@ -18,7 +18,8 @@ class Navbar extends Component {
           default:
             return [
               <li key="1"><Button className="btn btn-cyan" text="About Us"/></li>,
-              <li key="2"><Link to="/project" className="btn btn-amber amber darken-3">New Project</Link></li>, 
+              <li key="2"><Link to="/project/workflow" className="btn btn-amber amber darken-3">New Project
+              </Link></li>, 
               <li key="3"><Button className="btn btn-amber amber darken-5" href="/api/logout" text="Logout"/></li>
             ];
       }
@@ -37,7 +38,7 @@ class Navbar extends Component {
           <nav id="mainNav" className="navbar">
             <div className="navbar-header">
               <Link 
-                to={this.props.auth ? '/project' : '/'} className="navbar-brand z-depth-1" style={logoStyle}>
+                to={this.props.auth ? '/project/workflow' : '/'} className="navbar-brand z-depth-1" style={logoStyle}>
                 DevGuide Logo
               </Link>
             </div>

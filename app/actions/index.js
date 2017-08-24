@@ -1,7 +1,7 @@
 // helper to make AJAX request
 import axios from 'axios';
 
-import { FETCH_USER, FETCH_PROJECTS } from './types';
+import { FETCH_USER, FETCH_WORKFLOW, FETCH_INSTALLATION} from './types';
 
 // Whenever the Action Creator is called, it will return a function
 // Redux Thunk will see we returned a function, 
@@ -17,8 +17,14 @@ export const fetchUser = () => async dispatch => {
     );
 };
 
-export const fetchProjects = () => async dispatch => {
-    const res = await axios.get('/api/projects');
-    dispatch({type: FETCH_PROJECTS, payload: res.data}
+export const fetchWorkflow = () => async dispatch => {
+    const res = await axios.get('/api/projects/workflow');
+    dispatch({type: FETCH_WORKFLOW, payload: res.data}
+    );
+};
+
+export const fetchInstallation = () => async dispatch => {
+    const res = await axios.get('/api/projects/installation');
+    dispatch({type: FETCH_INSTALLATION, payload: res.data}
     );
 };
