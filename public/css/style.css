@@ -1,38 +1,41 @@
 html {
-  width: 100vw;
-  margin: 0;
+	height: 100%;
+	margin: 0;
 }
 
 body {
-  background-color: #24496E;
-  width: 100vw;
-  margin: 0;
+	background-color: #24496e;
+	margin: 0;
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
 }
 
 .navbar {
-  /* background-color: rgba(7, 5, 67, .7); */
+	/* background-color: rgba(7, 5, 67, .7); */
 }
 
 .footer {
-  height: 20%;
-  border: 5px solid black;
+	height: 100%;
+	width: 100vw;
+	margin-bottom: -4rem;
+	border: .02rem ridge black !important;
 }
 
 .landing {
-  height: 100%;
-  color: rgba(7, 5, 67, 1);
-  overflow: scroll;
+	height: 60vh;
+	color: rgba(7, 5, 67, 1);
+	flex: 1;
 }
 
 .nav-logo {
-  height: 10vw;
-  background-color: rgba(255, 255, 255, .1);
-  border: .01rem solid black;
+	height: 10vw;
+	background-color: rgba(255, 255, 255, .1);
+	border: .01rem solid black;
 }
 
 .main-logo {
-  height: 20vw;
-  padding: 0;
-  margin: 0;
-  border: .01rem solid rgba(0,0,0,.1);
+	height: 20vw;
+	padding: 0;
+	margin: 0;
 }
