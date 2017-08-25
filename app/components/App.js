@@ -9,8 +9,10 @@ import * as actions from '../actions';
 import Navbar from './Navbar';
 import Main from './Main';
 import Footer from './Footer';
+import About from './About';
 import Project from './Project';
 import Installation from './Installation';
+import Deployment from './Deployment';
 
 class App extends Component {
 	// when the app boots up, call our action creator to fetch the current user.
@@ -26,8 +28,10 @@ class App extends Component {
 					<div>
 						<Navbar />
 						<Route exact path="/" component={Main} />
+						<Route exact path="/about" component={About} />
 						<Route exact path="/project" component={Project} />
 						<Route exact path="/project/installation" component={Installation} />
+						<Route exact path="/project/deployment" component={Deployment} />
 						<Footer />
 					</div>
 				</BrowserRouter>

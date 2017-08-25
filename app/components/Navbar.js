@@ -22,7 +22,9 @@ class Navbar extends Component {
 			default:
 				return [
 					<li key="1">
-						<Button className="btn btn-cyan z-depth-3" text="About Us" />
+						<Link to="/about" className="btn btn-cyan z-depth-3" > 
+							About Us
+						</Link>
 					</li>,
 					<li key="2">
 						<Link to="/project" className="btn btn-amber amber darken-3 z-depth-3">

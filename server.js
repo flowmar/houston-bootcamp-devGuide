@@ -10,7 +10,7 @@ const keys = require('./config/keys');
 // require User model
 require("./models/User");
 require("./models/Project");
-require("./models/Response");
+//require("./models/Response");
 
 // require passport
 require('./config/passport');

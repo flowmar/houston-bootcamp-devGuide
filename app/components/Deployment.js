@@ -2,16 +2,16 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
-import { fetchInstallation } from '../actions';
+import { fetchDeployment } from '../actions';
 
-class Installation extends Component {
+class Deployment extends Component {
     componentDidMount() {
-        this.props.fetchInstallation();
+        this.props.fetchDeployment();
     }
              
     renderProjects() {
         return this.props.projects.map(function(project, key)  {
-            if(project.lifecycle === "Installation") {
+            if(project.lifecycle === "Deployment") {
                 return (
                     <div className="row" key={project._id}>
                         <div className="col-sm-8">
@@ -36,12 +36,11 @@ class Installation extends Component {
         return(
             <div>
                  <br/><br/><br/>
-                <h1> Installation Lifecycle</h1>
+                <h1> Deployment Lifecycle</h1>
                 {this.renderProjects()}
                  <br/>
                 <div className="footerBtn">
-                    <Link to="/project" className="btn btn-primary"> Back To Workflow </Link>
-                    <Link to="/project/deployment" className="btn btn-primary"> Coming Up Deployment</Link>
+                    <Link to="/project/installation" className="btn btn-primary"> Back To Installation </Link>
                 </div>
                  <br/><br/><br/>
             </div>
@@ -58,6 +57,4 @@ function mapStateToProps({projects}) {
     return { projects };
 }
 
-export default connect(mapStateToProps, {fetchInstallation})(Installation);
-
-
+export default connect(mapStateToProps, {fetchDeployment})(Deployment);
