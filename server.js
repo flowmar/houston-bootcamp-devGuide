@@ -5,6 +5,7 @@ const express = require("express");
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 
 // require User model
@@ -37,6 +38,8 @@ db.once("open", function() {
 
 // Initialize Express
 const app = express();
+
+app.use(bodyParser.json());
 
 // Tell express to make use of cookies
 app.use(
