@@ -22,7 +22,7 @@ class Project extends Component {
 								<div className="card-body" key={project.resource[key]}>
 									<h4 className="card-title">Additional Resources For Help: </h4>
 									<h5 className="card-text">
-										{'Description: ' + project.resource[0].name}
+										{'Name: ' + project.resource[0].name}
 									</h5>
 									<h5 className="card-text">
 										{'Description: ' + project.resource[0].description}

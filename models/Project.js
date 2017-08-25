@@ -43,15 +43,15 @@ const Project = module.exports = mongoose.model("projects", ProjectSchema);
 
 //Export Projects
 module.exports.getProjects = (callback) => {
-    Project.find(callback);
-}
-
-// Get Project by Id
-module.exports.getProjectById = (id, callback) => {
-	Project.findById(id, callback);
+    Project.find({lifecycle: "Workflow"}, callback);
 }
 
 // Get Installation Lifecycle Cards
 module.exports.getInstallation = (callback) => {
     Project.find({lifecycle: "Installation"}, callback);
+}
+
+// Get Installation Lifecycle Cards
+module.exports.getDeployment = (callback) => {
+    Project.find({lifecycle: "Deployment"}, callback);
 }
