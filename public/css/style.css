@@ -39,3 +39,34 @@ body {
 	padding: 0;
 	margin: 0;
 }
+
+.mainLogo-appear {
+	opacity: 0.01;
+}
+
+.mainLogo-appear.mainLogo-appear-active {
+	opacity: 1;
+	transition: opacity .5000ms ease-in;
+}
+
+.mainLogo-enter {
+	opacity: 0.01;
+	width: 0;
+}
+
+.mainLogo-enter.mainLogo-enter-active {
+	opacity: 1;
+	width: 100%;
+	transition: 700ms;
+}
+
+.mainLogo-leave {
+	opacity: 1;
+	width: 100%;
+}
+
+.mainLogo-leave.mainLogo-leave-active {
+	opacity: 0.01;
+	width: 0;
+	transition: 700ms;
+}

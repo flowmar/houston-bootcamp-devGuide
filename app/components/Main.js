@@ -1,9 +1,8 @@
 import React from 'react';
-
 export default class Main extends React.Component {
 	render() {
 		return (
-			<div className="landing row z-depth-3 animated slideInRight">
+			<div className="landing row z-depth-3 animated slideInRight hoverable">
 				<div className="card col blue-grey lighten-4">
 					<div className="card-body text-center">
 						<img src="./images/devguide-logo.png" className="img-fluid main-logo mt-0 mb-0" />

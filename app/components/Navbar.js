@@ -15,24 +15,32 @@ class Navbar extends Component {
 			case false:
 				return (
 					<li>
-						<Button className="btn btn-amber amber darken-5" href="/auth/google" text="Login With Google" />
+						<Button
+							className="btn btn-amber amber darken-5 hoverable"
+							href="/auth/google"
+							text="Login With Google"
+						/>
 					</li>
 				);
 			// user is logged in
 			default:
 				return [
 					<li key="1">
-						<Link to="/about" className="btn btn-cyan z-depth-3" > 
-							About Us
-						</Link>
+						<Button href="/about" className="btn btn-cyan z-depth-3 hoverable" text="About Us" />
 					</li>,
 					<li key="2">
-						<Link to="/project" className="btn btn-amber amber darken-3 z-depth-3">
-							New Project
-						</Link>
+						<Button
+							href="/project"
+							className="btn btn-amber amber darken-3 z-depth-3 hoverable"
+							text="New Project"
+						/>
 					</li>,
 					<li key="3">
-						<Button className="btn btn-amber amber darken-5 z-depth-3" href="/api/logout" text="Logout" />
+						<Button
+							className="btn btn-amber amber darken-5 z-depth-3 hoverable"
+							href="/api/logout"
+							text="Logout"
+						/>
 					</li>
 				];
 		}
@@ -45,7 +53,11 @@ class Navbar extends Component {
 				{/* Navigation  */}
 				<nav id="mainNav" className="navbar col indigo darken-4">
 					<div className="navbar-header">
-						<Link to={this.props.auth ? '/project' : '/'} className="navbar-brand" style={logoStyle}>
+						<Link
+							to={this.props.auth ? '/project' : '/'}
+							className="navbar-brand hoverable"
+							style={logoStyle}
+						>
 							<img src="./images/d-logo.png" className="nav-logo z-depth-2 img-fluid rounded" />
 						</Link>
 					</div>
