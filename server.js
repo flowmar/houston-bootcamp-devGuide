@@ -2,10 +2,11 @@
 const path = require("path");
 const fs = require("fs");
 const express = require("express");
+const bodyParser = require('body-parser');
+var logger = require("morgan");
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
-const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 
 // require User model
@@ -15,6 +16,26 @@ require("./models/Project");
 
 // require passport
 require('./config/passport');
+
+// Initialize Express
+const app = express();
+
+// Setting view engine to html
+app.set("view engine", "html");
+app.engine("html", function(path,options, callback){
+    fs.readFile(path, "utf-8", callback);
+});
+
+// Run Morgan for Logging
+app.use(logger("dev"));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
+app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+
+// Serve static content for the app from the client directory
+app.use(express.static(path.join(__dirname, "public")));
+
 
 // Database Dependencies
 const Promise = require('bluebird');
@@ -36,10 +57,6 @@ db.once("open", function() {
     console.log("Mongoose connection successful.");
 });
 
-// Initialize Express
-const app = express();
-
-app.use(bodyParser.json());
 
 // Tell express to make use of cookies
 app.use(
