@@ -25,7 +25,7 @@ module.exports = app => {
         });
     });
 
-    app.get('/api/projects/deployment', (req, res,) => {
+    app.get('/api/projects/deployment', (req, res) => {
         Project.getDeployment((err, doc) => {   
             if (err) {
                 console.log(err);
