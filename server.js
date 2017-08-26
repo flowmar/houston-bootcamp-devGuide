@@ -53,26 +53,21 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Set Port Number to Listen 
-const PORT = 3000;
-
 // require authRoutes for user Login 
 require('./routes/authRoutes')(app);
 require('./routes/projectRoutes')(app);
 
-if (process.env.NODE_ENV === 'production') {
-    // Express will server up production assets like our 
-    // Serve static content for the app from the client directory
-    app.use(express.static(path.join(__dirname, "public")));
 
-    //Express will serve up the index.html file
+// Set Port Number to Listen 
+const PORT = 3000;
 
-    // ===== Routes ===== //
-    app.get("/", function(req, res){
-        res.sendFile(path.join(__dirname, "./public/index.html"));
-    });
+// Serve static content for the app from the client directory
+app.use(express.static(path.join(__dirname, "public")));
 
-};
+// ===== Routes ===== //
+ app.get("/", function(req, res){
+    res.sendFile(path.join(__dirname, "./public/index.html"));
+});
 
 
 app.listen(process.env.PORT ||PORT, function(){
