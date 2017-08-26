@@ -53,6 +53,11 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
+// ===== Routes ===== //
+ app.get("/", function(req, res){
+    res.sendFile(path.join(__dirname, "./public/index.html"));
+});
+
 // require authRoutes for user Login 
 require('./routes/authRoutes')(app);
 require('./routes/projectRoutes')(app);
@@ -60,14 +65,6 @@ require('./routes/projectRoutes')(app);
 
 // Set Port Number to Listen 
 const PORT = 3000;
-
-// Serve static content for the app from the client directory
-app.use(express.static(path.join(__dirname, "public")));
-
-// ===== Routes ===== //
- app.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "./public/index.html"));
-});
 
 
 app.listen(process.env.PORT ||PORT, function(){
