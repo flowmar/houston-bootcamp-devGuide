@@ -14,7 +14,7 @@ module.exports = app => {
         });
     });
     
-    app.get('/api/projects/installation', (req, res,) => {
+    app.get('/api/projects/installation', (req, res) => {
         Project.getInstallation((err, doc) => {   
             if (err) {
                 console.log(err);
