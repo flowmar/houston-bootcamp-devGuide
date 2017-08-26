@@ -30,16 +30,17 @@ passport.use(new GoogleStrategy (
         callbackURL: 'https://devguide2017.herokuapp.com/auth/google/callback',
         proxy: true
     }, 
-    async (accessToken, refreshToken, profile, done) => {
+    (accessToken, refreshToken, profile, done) => {
         //console.log("profile", profile);
-        const existingUser = await User.findOne({googleId: profile.id});
+        User.findOne({googleId: profile.id}).then(existingUser => {
             // we already have a record in the database
             if(existingUser) {
-                return done(null, existingUser);
+                done(null, existingUser);
+            } else {
+            new User ({ googleId: profile.id})
+            .save()
+            .then(user => done(null, user));
             }
-                // we don't have a user record
-                const user = await new User ({ googleId: profile.id}).save();
-                done(null, user);
-        }
-    )
+        })
+    })
 );
