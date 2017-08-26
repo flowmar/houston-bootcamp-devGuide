@@ -12,12 +12,12 @@ class Project extends Component {
 		return this.props.projects.map(function(project, key) {
 			if (project.lifecycle === 'Workflow') {
 				return (
-					<div className="row" key={project._id}>
-						<div className="col-sm-8">
+					<div className="row justify-content-center" key={project._id}>
+						<div className="col-6">
 							<br />
 							<div className="card">
-								<h4 className="card-header">
-									{project.todo}{' '}
+								<h4 className="card-header text-center">
+									{project.todo}
 								</h4>
 								<div className="card-body" key={project.resource[key]}>
 									<h4 className="card-title">Additional Resources For Help: </h4>
@@ -47,13 +47,19 @@ class Project extends Component {
 				<br />
 				<br />
 				<br />
-				<h1> Worflow Lifecycle</h1>
+				<div className="row justify-content-center">
+					<div className="col-6 text-center" >
+						<h1> Worflow Lifecycle</h1>
+					</div>
+				</div>
 				{this.renderProjects()}
 				<br />
-				<div className="footerBtn">
-					<Link to="/project/installation" className="btn btn-primary">
-						{' '}Coming Up Installation
-					</Link>
+				<div className="row justify-content-end">
+					<div className="col-7">
+						<Link to="/project/installation" className="btn btn-primary">
+							{' '}Coming Up Installation
+						</Link>
+					</div>
 				</div>
 				<br />
 				<br />

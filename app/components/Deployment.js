@@ -13,10 +13,10 @@ class Deployment extends Component {
         return this.props.projects.map(function(project, key)  {
             if(project.lifecycle === "Deployment") {
                 return (
-                    <div className="row" key={project._id}>
-                        <div className="col-sm-8">
+                    <div className="row justify-content-center" key={project._id}>
+                        <div className="col-sm-6">
                             <br/>
-                            <div className="card">
+                            <div className="card text-center">
                                 <h4 className="card-header">{project.todo} </h4>
                                 <div className="card-body"> 
                                     <h4 className="card-title">Additional Resources For Help: </h4> 
@@ -36,11 +36,17 @@ class Deployment extends Component {
         return(
             <div>
                  <br/><br/><br/>
-                <h1> Deployment Lifecycle</h1>
+                 <div className="row justify-content-center">
+					<div className="col-6 text-center" >
+                        <h1> Deployment Lifecycle</h1>
+                    </div>
+                </div>
                 {this.renderProjects()}
                  <br/>
-                <div className="footerBtn">
-                    <Link to="/project/installation" className="btn btn-primary"> Back To Installation </Link>
+                <div className="row justify-content-end">
+					<div className="col-7">
+                        <Link to="/project/installation" className="btn btn-primary"> Back To Installation </Link>
+                    </div>
                 </div>
                  <br/><br/><br/>
             </div>
