@@ -13,11 +13,16 @@ class Navbar extends Component {
 				return;
 			//if user isn't logged in
 			case false:
-				return (
-					<li>
+				return [
+					<li key="1">
+						<Link to="/about" className="btn btn-cyan z-depth-3" > 
+							About Us
+						</Link>
+					</li>,
+					<li key="3">
 						<Button className="btn btn-amber amber darken-5" href="/auth/google" text="Login With Google" />
 					</li>
-				);
+				];
 			// user is logged in
 			default:
 				return [
