@@ -1,7 +1,7 @@
 module.exports = {
 
     // This is the entry point or start of our react applicaton
-    entry: "./app/index.js",
+    entry: ["babel-polyfill", "./app/index.js"],
 
     // The plain compiled JavaScript will be output into this file
     output: {
