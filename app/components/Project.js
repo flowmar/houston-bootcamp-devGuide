@@ -5,7 +5,7 @@ import { fetchProjects } from '../actions';
 
 class Project extends Component {
 	componentDidMount() {
-		console.log(this.props.fetchProjects());
+		//console.log(this.props.fetchProjects());
 		this.props.fetchProjects();
 	}
 	renderProjects() {
