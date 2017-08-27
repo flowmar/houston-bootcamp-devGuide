@@ -3,3 +3,6 @@ node_modules
 yarn-error.log
 info.txt
 dev.js
+config/keys.js
+config/passport.js
+config/dev
