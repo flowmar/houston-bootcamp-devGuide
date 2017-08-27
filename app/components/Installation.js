@@ -8,7 +8,7 @@ class Installation extends Component {
     componentDidMount() {
         this.props.fetchInstallation();
     }
-             
+
     renderProjects() {
         return this.props.projects.map(function(project, key)  {
             if(project.lifecycle === "Installation") {
@@ -18,12 +18,12 @@ class Installation extends Component {
                             <br/>
                             <div className="card">
                                 <h4 className="card-header text-center">{project.todo} </h4>
-                                <div className="card-body"> 
-                                    <h4 className="card-title">Additional Resources For Help: </h4> 
+                                <div className="card-body">
+                                    <h4 className="card-title">Additional Resources For Help: </h4>
                                     <h5 className="card-text">{"Name: " + project.resource[0].name}</h5>
-                                    <h5 className="card-text">{"Description: " + project.resource[0].description}</h5> 
-                                    <h5 className="card-text">{"Link: " + project.resource[0].link}</h5> 
-                                </div>  
+                                    <h5 className="card-text">{"Description: " + project.resource[0].description}</h5>
+                                    <h5 className="card-text">{"Link: " + project.resource[0].link}</h5>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -31,7 +31,7 @@ class Installation extends Component {
             }
         })
     }
-    
+
     render() {
         return(
             <div>
@@ -51,7 +51,7 @@ class Installation extends Component {
                 </div>
                  <br/><br/><br/>
             </div>
-            
+
         )
     }
 };

@@ -9,7 +9,7 @@ export default class About extends Component {
 					<br />
 					<div className="d-flex row text-center">
 					<div className="col"/>
-						<div className="card amber lighten-1 z-depth-5 hoverable">
+						<div className="card amber lighten-1 z-depth-5 hoverable animated fadeInUpBig">
 							<div className="card-header">
 								<h2 className="card-title font-weight-bold mdb-color-text shadow-black">L. Rochelle Beal</h2>
 								<h6 className="card-subtitle shadow-white">MERN Stack Developer</h6>
@@ -38,7 +38,7 @@ export default class About extends Component {
 							</div>
 						</div>
 						<div className="col-1" />
-						<div className="card amber lighten-1 z-depth-5 hoverable">
+						<div className="card amber lighten-1 z-depth-5 hoverable animated fadeInUpBig">
 						<div className="card-header">
 							<h2 className="card-title font-weight-bold mdb-color-text shadow-black">Omar Imam</h2>
 							<h6 className="card-subtitle shadow-white">Front-End Developer/Graphic Designer</h6>

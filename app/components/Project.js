@@ -15,7 +15,7 @@ class Project extends Component {
 					<div className="row justify-content-center" key={project._id}>
 						<div className="col-6">
 							<br />
-							<div className="card z-depth-5 hoverable blue-grey lighten-4">
+							<div className="card z-depth-5 hoverable blue-grey lighten-4 animated rollIn">
 								<p className="card-header text-center font-weight-bold display-4 shadow-white">
 									{project.todo}
 								</p>
@@ -53,7 +53,7 @@ class Project extends Component {
 				<br />
 				<div className="row justify-content-center">
 					<div className="text-center col">
-						<p className="display-2 deep-orange-text shadow-black font-weight-bold"> Workflow Lifecycle</p>
+						<p className="display-2 deep-orange-text shadow-black font-weight-bold"> Workflow Phase</p>
 					</div>
 				</div>
 				{this.renderProjects()}
