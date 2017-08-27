@@ -5,14 +5,14 @@ export default class About extends Component {
 		return (
 			<div className="landing row animated slideInRight">
 				<div className="jumbotron amber darken-4 col z-depth-5">
-					<h1 className="display-3 card-title text-center font-weight-bold">Meet The Designers</h1>
+					<p className="display-3 shadow-white card-title text-center font-weight-bold">Meet The Designers</p>
 					<br />
 					<div className="d-flex row text-center">
 					<div className="col"/>
 						<div className="card amber lighten-1 z-depth-5 hoverable">
 							<div className="card-header">
-								<h2 className="card-title font-weight-bold mdb-color-text">L. Rochelle Beal</h2>
-								<h6 className="card-subtitle">MERN Stack Developer</h6>
+								<h2 className="card-title font-weight-bold mdb-color-text shadow-black">L. Rochelle Beal</h2>
+								<h6 className="card-subtitle shadow-white">MERN Stack Developer</h6>
 							</div>
 							<div className="card-body">
 								<p className="card-text">
@@ -40,8 +40,8 @@ export default class About extends Component {
 						<div className="col-1" />
 						<div className="card amber lighten-1 z-depth-5 hoverable">
 						<div className="card-header">
-							<h2 className="card-title font-weight-bold mdb-color-text">Omar Imam</h2>
-							<h6 className="card-subtitle">Front-End Developer/Graphic Designer</h6>
+							<h2 className="card-title font-weight-bold mdb-color-text shadow-black">Omar Imam</h2>
+							<h6 className="card-subtitle shadow-white">Front-End Developer/Graphic Designer</h6>
 							</div>
 							<div className="card-body">
 							<p className="card-text">
