@@ -1,64 +1,73 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 export default class About extends Component {
-    render() {
-        return (
-            <div className="landing row z-depth-3 animated slideInRight">
-                <div className="card col blue-grey lighten-4">
-                    <div className="card-body">
-                        <div className="container" id="about-us">
-                            <h1 className="display-3 card-title">Meet The Designers</h1>
-                            <br/>
-                            <div className="row card-body">
-                                <div className="col-6 card">
-                                    <h1>L. Rochelle Beal</h1>
-                                    <h4>MERN Stack Developer</h4>
-                                    <h5 className="card-text">
-                                        Navy Veteran
-                                        <a href="https://ro04.github.io/Portfolio/">@Me</a>{' '}
-                                    </h5>
-                                    <a href="#">
-                                        <i class="fa fa-google" aria-hidden="true"/>
-                                        bealrochelle@gmail.com
-                                    </a>{' '}
-                                    <br/>
-                                    <a href="https://github.com/ro04">
-                                        <i class="fa fa-github" aria-hidden="true"/>
-                                        https://github.com/ro04
-                                    </a>{' '}
-                                    <br/>
-                                    <a href="https://linkedin.com/in/rochellebeal">
-                                        <i class="fa fa-linkedin" aria-hidden="true"/>
-                                        https://linkedin.com/in/rochellebeal
-                                    </a>
-                                </div>
-                                <div className="col-6 card">
-                                    <h1>Omar Imam</h1>
-                                    <h4>Front-End Developer/Graphic Designer</h4>
-                                    <h5 className="card-text">
-                                        Owner of
-                                        <a href="https://kineticvortexflow.com/">@KineticVortexFlow</a>
-                                    </h5>
-                                    <a href="#">
-                                        <i class="fa fa-google" aria-hidden="true"/>
-                                        omar.imam@kineticvortex.com
-                                    </a>{' '}
-                                    <br/>
-                                    <a href="https://github.com/flowmar">
-                                        <i class="fa fa-github" aria-hidden="true"/>
-                                        https://github.com/flowmar
-                                    </a>{' '}
-                                    <br/>
-                                    <a href="https://linked.com/in/flowmar">
-                                        <i class="fa fa-linkedin" aria-hidden="true"/>
-                                        https://linked.com/in/flowmar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        );
-    }
+	render() {
+		return (
+			<div className="landing row animated slideInRight">
+				<div className="jumbotron amber darken-4 col z-depth-5">
+					<h1 className="display-3 card-title text-center font-weight-bold">Meet The Designers</h1>
+					<br />
+					<div className="d-flex row text-center">
+					<div className="col"/>
+						<div className="card amber lighten-1 z-depth-5 hoverable">
+							<div className="card-header">
+								<h2 className="card-title font-weight-bold mdb-color-text">L. Rochelle Beal</h2>
+								<h6 className="card-subtitle">MERN Stack Developer</h6>
+							</div>
+							<div className="card-body">
+								<p className="card-text">
+									Navy Veteran{' '}
+									<a className="card-link hoverable" href="https://ro04.github.io/Portfolio/">
+										@Me
+									</a>{' '}
+								</p>
+								<a href="mailto:bealrochelle@gmail.com" className="hoverable card-link">
+									<i className="fa fa-google fa-2x" />
+									{' '}bealrochelle@gmail.com
+								</a>{' '}
+								<br />
+								<a href="https://github.com/ro04" className="card-link hoverable">
+									<i className="fa fa-github fa-2x" />
+									{' '}https://github.com/ro04
+								</a>{' '}
+								<br />
+								<a href="https://linkedin.com/in/rochellebeal" className="card-link hoverable">
+									<i className="fa fa-linkedin fa-2x" />
+									{' '}https://linkedin.com/in/rochellebeal
+								</a>
+							</div>
+						</div>
+						<div className="col-1" />
+						<div className="card amber lighten-1 z-depth-5 hoverable">
+						<div className="card-header">
+							<h2 className="card-title font-weight-bold mdb-color-text">Omar Imam</h2>
+							<h6 className="card-subtitle">Front-End Developer/Graphic Designer</h6>
+							</div>
+							<div className="card-body">
+							<p className="card-text">
+								Owner of
+								<a href="https://kineticvortexflow.com/" className="hoverable">@KineticVortexFlow</a>
+							</p>
+							<a href="mailto:omar.imam@kineticvortex.com" className="hoverable">
+									<i className="fa fa-google fa-2x hoverable" />{' '}
+								omar.imam@kineticvortex.com
+							</a>{' '}
+							<br />
+							<a href="https://github.com/flowmar" className="hoverable">
+									<i className="fa fa-github fa-2x" />{' '}
+								https://github.com/flowmar
+							</a>{' '}
+							<br />
+							<a href="https://linked.com/in/flowmar" className="hoverable">
+								<i className="fa fa-linkedin fa-2x" />{' '}
+								https://linked.com/in/flowmar
+							</a>
+							</div>
+						</div>
+						<div className="col"/>
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
