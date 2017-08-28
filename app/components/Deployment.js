@@ -15,7 +15,7 @@ class Deployment extends Component {
                     <div className="row justify-content-center" key={project._id}>
                         <div className="col-6">
                             <br/>
-                            <div className="card z-depth-5 hoverable blue-grey lighten-4 animeted rollIn text-center">
+                            <div className="card z-depth-5 hoverable blue-grey lighten-4 animated rollIn text-center">
                                 <p className="card-header text-center display-5 font-weight-bold shadow-white">{project.todo} </p>
                                 <div className="card-body">
                                     <p className="card-title text-center">Additional Resources For Help: </p>
