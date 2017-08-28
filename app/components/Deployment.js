@@ -8,37 +8,39 @@ class Deployment extends Component {
     componentDidMount() {
         this.props.fetchDeployment();
     }
-             
     renderProjects() {
         return this.props.projects.map(function(project, key)  {
             if(project.lifecycle === "Deployment") {
                 return (
                     <div className="row justify-content-center" key={project._id}>
-                        <div className="col-sm-6">
+                        <div className="col-6">
                             <br/>
-                            <div className="card text-center">
-                                <h4 className="card-header">{project.todo} </h4>
-                                <div className="card-body"> 
-                                    <h4 className="card-title">Additional Resources For Help: </h4> 
-                                    <h5 className="card-text">{"Name: " + project.resource[0].name}</h5>
-                                    <h5 className="card-text">{"Description: " + project.resource[0].description}</h5> 
-                                    <h5 className="card-text">{"Link: " + project.resource[0].link}</h5> 
-                                </div>  
+                            <div className="card z-depth-5 hoverable blue-grey lighten-4 animeted rollIn text-center">
+                                <p className="card-header text-center display-5 font-weight-bold shadow-white">{project.todo} </p>
+                                <div className="card-body">
+                                    <p className="card-title text-center">Additional Resources For Help: </p>
+                                    <p className="card-text text-center dark-grey-text">{project.resource[0].name}</p>
+                                    <p className="card-text dark-grey-text font-weight-bold text-center">{project.resource[0].description}</p>
+                                    <p className="card-text">
+                                        <a href={project.resource[0].link}>
+                                            <button className="btn btn-cyan btn-block">{project.resource[0].name}</button></a></p>
+                                <br/>
+                                </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 )
             }
         })
     }
-    
+
     render() {
         return(
-            <div>
+            <div className="card deep-orange darken-2 animated slideInDown">
                  <br/><br/><br/>
                  <div className="row justify-content-center">
-					<div className="col-6 text-center" >
-                        <h1> Deployment Lifecycle</h1>
+					<div className="col text-center" >
+                        <p className="display-2 deep-purple-text shadow-black font-weight-bold"> Deployment Phase</p>
                     </div>
                 </div>
                 {this.renderProjects()}
@@ -50,7 +52,7 @@ class Deployment extends Component {
                 </div>
                  <br/><br/><br/>
             </div>
-            
+
         )
     }
 };

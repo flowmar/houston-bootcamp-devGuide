@@ -11,7 +11,7 @@ export default class About extends Component {
 					<div className="col"/>
 						<div className="card amber lighten-1 z-depth-5 hoverable animated fadeInUpBig">
 							<div className="card-header">
-								<h2 className="card-title font-weight-bold mdb-color-text shadow-black">L. Rochelle Beal</h2>
+								<h2 className="card-title font-weight-bold mdb-color-text shadow-white">L. Rochelle Beal</h2>
 								<h6 className="card-subtitle shadow-white">MERN Stack Developer</h6>
 							</div>
 							<div className="card-body">
@@ -22,17 +22,17 @@ export default class About extends Component {
 									</a>{' '}
 								</p>
 								<a href="mailto:bealrochelle@gmail.com" className="hoverable card-link">
-									<i className="fa fa-google fa-2x" />
+									<i className="fa fa-google fa-2x shadow-white" />
 									{' '}bealrochelle@gmail.com
 								</a>{' '}
 								<br />
 								<a href="https://github.com/ro04" className="card-link hoverable">
-									<i className="fa fa-github fa-2x" />
+									<i className="fa fa-github fa-2x shadow-white" />
 									{' '}https://github.com/ro04
 								</a>{' '}
 								<br />
 								<a href="https://linkedin.com/in/rochellebeal" className="card-link hoverable">
-									<i className="fa fa-linkedin fa-2x" />
+									<i className="fa fa-linkedin fa-2x shadow-white" />
 									{' '}https://linkedin.com/in/rochellebeal
 								</a>
 							</div>
@@ -40,7 +40,7 @@ export default class About extends Component {
 						<div className="col-1" />
 						<div className="card amber lighten-1 z-depth-5 hoverable animated fadeInUpBig">
 						<div className="card-header">
-							<h2 className="card-title font-weight-bold mdb-color-text shadow-black">Omar Imam</h2>
+							<h2 className="card-title font-weight-bold mdb-color-text shadow-white">Omar Imam</h2>
 							<h6 className="card-subtitle shadow-white">Front-End Developer/Graphic Designer</h6>
 							</div>
 							<div className="card-body">
@@ -49,17 +49,17 @@ export default class About extends Component {
 								<a href="https://kineticvortexflow.com/" className="hoverable">@KineticVortexFlow</a>
 							</p>
 							<a href="mailto:omar.imam@kineticvortex.com" className="hoverable">
-									<i className="fa fa-google fa-2x hoverable" />{' '}
+									<i className="fa fa-google fa-2x shadow-white" />{' '}
 								omar.imam@kineticvortex.com
 							</a>{' '}
 							<br />
-							<a href="https://github.com/flowmar" className="hoverable">
-									<i className="fa fa-github fa-2x" />{' '}
+							<a href="https://github.com/flowmar" className="hoverable card-link">
+									<i className="fa fa-github fa-2x shadow-white" />{' '}
 								https://github.com/flowmar
 							</a>{' '}
 							<br />
 							<a href="https://linked.com/in/flowmar" className="hoverable">
-								<i className="fa fa-linkedin fa-2x" />{' '}
+								<i className="fa fa-linkedin fa-2x shadow-white" />{' '}
 								https://linked.com/in/flowmar
 							</a>
 							</div>
