@@ -16,7 +16,7 @@ class Project extends Component {
 						<div className="col-6">
 							<br />
 							<div className="card z-depth-5 hoverable blue-grey lighten-4 animated rollIn">
-								<p className="card-header text-center font-weight-bold display-4 shadow-white">
+								<p className="card-header text-center display-5 font-weight-bold shadow-white">
 									{project.todo}
 								</p>
 								<div className="card-body" key={project.resource[key]}>
